@@ -1,0 +1,248 @@
+.onboarding {
+    height: 100%;
+    width: 100%;
+}
+
+//  onboarding__welcomescreen -----------------------------------------------------------
+.onboarding__welcomescreen {
+    height: 100%;
+    position: relative;
+    display: flex;
+    padding: 0 45px 47px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.onboarding__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.onboarding__slider {
+    height: 37%;
+    margin-bottom: 55px;
+}
+
+.onboarding__welcomescreen-login {
+    margin: 0 auto 24px;
+}
+
+.onboarding__welcomescreen-registration {
+    text-align: center;
+
+    a,
+    span {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 100%;
+        color: #fff;
+    }
+
+    a {
+        padding-bottom: 5px;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+        }
+    }
+}
+
+.onboarding__slider {
+    width: 100%;
+
+    .swiper-slide {
+        width: 100%;
+
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 25px;
+            font-weight: normal;
+            line-height: 1.6;
+            text-align: center;
+            color: #fff;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        width: 13px;
+        height: 6px;
+        border-radius: 3px;
+        background: #fff;
+        opacity: 1;
+        transition: .3s;
+
+        &.swiper-pagination-bullet-active {
+            opacity: 1;
+            width: 39px;
+            height: 6px;
+            border-radius: 3px;
+            background: #f8a800;
+        }
+    }
+}
+
+//  onboarding__registration -----------------------------------------------------------
+
+.onboarding__registration {
+    background-image: linear-gradient(to bottom, #fff, #d3d3d3);
+    padding: 0 35px 57px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.onboarding__registration-back {
+    display: block;
+    margin-bottom: 40px;
+}
+
+.onboarding__registration-title {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: right;
+    color: #13333e;
+}
+
+.onboarding__registration-subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: right;
+    color: #13333e;
+    margin-bottom: 37px;
+}
+
+.onboarding__registration-form {
+    width: 100%;
+
+    form {
+        button {
+            margin: 53px auto 13px;
+        }
+    }
+
+    a {
+        font-family: Heebo;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+        display: block;
+        text-decoration: underline;
+        color: #13333e;
+    }
+
+    .inputform {
+        input {
+            width: 100%;
+            height: 55px;
+            padding: 18px 21px 18px 50px;
+            border-radius: 13px;
+            box-shadow: 0 3px 6px 0 rgba(241, 233, 224, 0.16);
+            background-color: #fff;
+            unicode-bidi: bidi-override;
+            direction: RTL;
+            font-size: 14px;
+            font-weight: 300;
+            text-align: right;
+            color: #13333e;
+
+            &::placeholder {
+                color: #13333e;
+                font-size: 14px;
+                transition: .3s;
+            }
+            &:focus::placeholder{
+                opacity: 0;
+            }
+        }
+
+        &+.inputform {
+            margin-top: 19px;
+        }
+    }
+}
+
+
+//  onboarding__login -----------------------------------------------------------
+.onboarding__login {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 45px 96px;
+}
+
+.onboarding__login-form {
+    width: 100%;
+
+    form {
+        text-align: center;
+
+        a {
+            display: block;
+            margin-top: 11px;
+            font-size: 12px;
+            font-weight: 500;
+            text-align: right;
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        button {
+            margin-top: 108px;
+        }
+    }
+
+    .inputform {
+        width: 100%;
+        text-align: right;
+
+        &+.inputform {
+            margin-top: 35px;
+        }
+
+        label {
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 100%;
+            color: #fff;
+            display: block;
+        }
+
+        input {
+            unicode-bidi: bidi-override;
+            direction: RTL;
+            width: 100%;
+            height: 59px;
+            padding: 15px 60px 15px 20px;
+            border-radius: 21px;
+            background-image: linear-gradient(to bottom, #fff, #d3d3d3);
+            font-size: 14px;
+            font-weight: 300;
+            color: #13333e;
+        }
+    }
+}
+
+
+.tab-screen {
+    display: none;
+}
+
+.tab-screen.active-tab {
+    display: flex;
+}
