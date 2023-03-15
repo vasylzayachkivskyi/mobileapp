@@ -96,17 +96,19 @@
 
 .onboarding__registration {
     background-image: linear-gradient(to bottom, #fff, #d3d3d3);
-    padding: 0 35px 57px;
+    padding: 35px 35px 57px;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: end;
+    justify-content: space-between;
 }
 
 .onboarding__registration-back {
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    background-size: cover;
 }
 
 .onboarding__registration-title {
@@ -121,15 +123,38 @@
     font-weight: 300;
     text-align: right;
     color: #13333e;
-    margin-bottom: 37px;
 }
 
 .onboarding__registration-form {
     width: 100%;
+    position: relative;
+
+    #error-message {
+        width: 100%;
+        margin: 11px 0;
+        border-radius: 13px;
+        border: solid 0.7px #ac2121;
+        background-color: rgba(192, 65, 28, 0.11);
+        font-size: 12px;
+        font-weight: 300;
+        padding: 20px 20px 12px 47px;
+        color: #201601;
+        position: relative;
+        .error-close{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            cursor: pointer;
+        }
+    }
 
     form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         button {
-            margin: 53px auto 13px;
+            width: 110%;
+            margin: 0 -5% 13px;
         }
     }
 
@@ -143,7 +168,37 @@
         color: #13333e;
     }
 
-    .inputform {
+    .inputfield {
+        position: relative;
+
+        .toggle-password {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 25px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        &.hidepass {
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 50%;
+                left: 25px;
+                width: 24px;
+                height: 2px;
+                transform: translate(-2px, -50%) rotate(-45deg);
+                background-color: #015B72;
+            }
+
+            input {
+                -webkit-text-security: circle;
+            }
+        }
+
         input {
             width: 100%;
             height: 55px;
@@ -163,15 +218,90 @@
                 font-size: 14px;
                 transition: .3s;
             }
-            &:focus::placeholder{
+
+            &:focus::placeholder {
                 opacity: 0;
             }
         }
 
-        &+.inputform {
+        &+.inputfield {
             margin-top: 19px;
         }
     }
+}
+
+.inputfield__row {
+    margin: 29px 0;
+    display: flex;
+    align-items: center;
+
+    p {
+        margin: 0 0 0 auto;
+    }
+}
+
+.checkfield {
+    display: flex;
+
+    &.terms {
+        margin: 27px 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .custom-checkbox+label {
+            font-weight: 300;
+        }
+
+        .custom-checkbox+label::after {
+            content: '';
+            width: 21px;
+            height: 21px;
+            margin-left: 9px;
+        }
+    }
+
+    &+.checkfield {
+        margin-left: 26px;
+    }
+
+    .custom-checkbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .custom-checkbox+label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .custom-checkbox+label::after {
+        content: '';
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid #fff;
+        background-color: #fff;
+        border-radius: 7px;
+        margin-left: 8px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+    }
+
+    .custom-checkbox:checked+label::after {
+        background-image: url(../img/icon_svg/done.svg);
+        background-size: 80%;
+        background-position: center;
+    }
+
 }
 
 
@@ -207,11 +337,36 @@
         }
     }
 
-    .inputform {
+    .inputfield {
         width: 100%;
         text-align: right;
+        position: relative;
+        &.log-name{
+            &:after{
+                content: '';
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                background-image: url(../img/icon_svg/user_icon.svg);
+                width: 18px;
+                height: 20px;
+                background-size: cover;
+            }
+        }
+        &.log-pass{
+            &:after{
+                content: '';
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                background-image: url(/img/icon_svg/lock_icon.svg);
+                width: 20px;
+                height: 20px;
+                background-size: cover;
+            }
+        }
 
-        &+.inputform {
+        &+.inputfield {
             margin-top: 35px;
         }
 

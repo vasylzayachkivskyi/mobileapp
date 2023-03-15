@@ -21,28 +21,28 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis condimentum erat.
+                                    <?php __('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis condimentum erat.', 'theme-domain')?>
                                 </p>
                             </div>
                             <div class="swiper-slide">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis condimentum erat.
+                                    <?php __('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis condimentum erat.', 'theme-domain')?>
                                 </p>
                             </div>
                             <div class="swiper-slide">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis condimentum erat.
+                                    <?php __('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis condimentum erat.', 'theme-domain')?>
                                 </p>
                             </div>
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
                     <a href="#" class="onboarding__welcomescreen-login whitebtn tab-btn" data-tab="log">
-                        התחברות
+                      <?php __('התחברות', 'theme-domain')?>
                     </a>
                     <div class="onboarding__welcomescreen-registration">
-                        <a href="#" class="tab-btn" data-tab="registr">הירשם</a>
-                        <span>אין לך חשבון?</span>
+                        <a href="#" class="tab-btn" data-tab="registr"><?php __('הירשם', 'theme-domain')?></a>
+                        <span><?php __('אין לך חשבון?', 'theme-domain')?></span>
                     </div>
 
                 </div>
@@ -56,11 +56,10 @@
                         </svg>
                     </a>
                     <h1 class="onboarding__registration-title">
-                        אין לך חשבון?<br>
-                        תיצור את המשתמש שלך
+                        <?php __('אין לך חשבון? תיצור את המשתמש שלך', 'theme-domain')?>
                     </h1>
                     <p class="onboarding__registration-subtitle">
-                        זה מהיר וקל.
+                    <?php __('זה מהיר וקל', 'theme-domain')?>
                     </p>
                     <div class="onboarding__registration-form">
                         <div id="error-message">
@@ -82,7 +81,7 @@
                                 </defs>
                             </svg>
                             </div>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            <?php __('Lorem Ipsum is simply dummy text of the printing and typesetting industry.', 'theme-domain')?>
                         </div>
                         <form>
                             <div class="inputfield">
@@ -102,7 +101,7 @@
                                     <label for="m">M</label>
                                 </div>
                                 <p>
-                                    מִין
+                                <?php __('מִין', 'theme-domain')?>
                                 </p>
                             </div>
 
@@ -134,11 +133,11 @@
                             </div>
                             <div class="checkfield terms">
                                 <input type="checkbox" class="custom-checkbox" id="terms" value="yes">
-                                <label for="terms">אני מסכים לתנאים וההגבלות</label>
+                                <label for="terms"><?php __('אני מסכים לתנאים וההגבלות', 'theme-domain')?></label>
                             </div>
-                            <button class="bluebtn" type="submit">הירשם</button>
+                            <button class="bluebtn" type="submit"><?php __('הירשם', 'theme-domain')?></button>
                         </form>
-                        <a href="#" class="tab-btn" data-tab="log">חזרה לכניסה</a>
+                        <a href="#" class="tab-btn" data-tab="log"><?php __('חזרה לכניסה', 'theme-domain')?></a>
                     </div>
                 </div>
 
@@ -147,15 +146,15 @@
                     <div class="onboarding__login-form">
                         <form>
                             <div class="inputfield log-name">
-                                <label for="name">שם משתמש</label>
+                                <label for="name"><?php __('שם משתמש', 'theme-domain')?></label>
                                 <input type="text" id="name" required>
                             </div>
                             <div class="inputfield log-pass">
-                                <label for="password">קוד כניסה</label>
+                                <label for="password"><?php __('קוד כניסה', 'theme-domain')?></label>
                                 <input type="password" id="password" required>
                             </div>
-                            <a href="#">שכחת את הסיסמא?</a>
-                            <button class="whitebtn" type="submit">התחברות</button>
+                            <a href="#"><?php __('שכחת את הסיסמא?', 'theme-domain')?></a>
+                            <button class="whitebtn" type="submit"><?php __('התחברות', 'theme-domain')?></button>
                         </form>
                     </div>
                 </div>
